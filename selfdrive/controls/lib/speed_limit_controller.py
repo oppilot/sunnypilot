@@ -13,7 +13,7 @@ from selfdrive.modeld.constants import T_IDXS
 
 
 _PARAMS_UPDATE_PERIOD = 2.  # secs. Time between parameter updates.
-_TEMP_INACTIVE_GUARD_PERIOD = 1.  # secs. Time to wait after activation before considering temp deactivation signal.
+_TEMP_INACTIVE_GUARD_PERIOD = 10000000000.  # secs. Time to wait after activation before considering temp deactivation signal.
 
 # Lookup table for speed limit percent offset depending on speed.
 _LIMIT_PERC_OFFSET_V = [0.1, 0.05, 0.038]  # 55, 105, 135 km/h
