@@ -611,7 +611,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
       "Take Control",
       "Turn Exceeds Steering Limit",
       AlertStatus.userPrompt, AlertSize.mid,
-      Priority.LOW, VisualAlert.steerRequired, AudibleAlert.promptRepeat, 1.),
+      Priority.LOW, VisualAlert.steerRequired, AudibleAlert.none, 1.),
   },
 
   # Thrown when the fan is driven at >50% but is not rotating
@@ -858,10 +858,10 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
     ET.NO_ENTRY: NoEntryAlert("Door Open"),
   },
 
-  EventName.seatbeltNotLatched: {
-    ET.SOFT_DISABLE: user_soft_disable_alert("Seatbelt Unlatched"),
-    ET.NO_ENTRY: NoEntryAlert("Seatbelt Unlatched"),
-  },
+  #EventName.seatbeltNotLatched: {
+    #ET.SOFT_DISABLE: user_soft_disable_alert("Seatbelt Unlatched"),
+    #ET.NO_ENTRY: NoEntryAlert("Seatbelt Unlatched"),
+  #},
 
   EventName.espDisabled: {
     ET.SOFT_DISABLE: soft_disable_alert("Electronic Stability Control Disabled"),
